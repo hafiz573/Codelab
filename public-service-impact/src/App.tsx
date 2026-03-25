@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import Solutions from './components/Solutions';
 import Technology from './components/Technology';
 import Impact from './components/Impact';
+import About from './components/About';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import AIChatbot from './components/AIChatbot';
@@ -16,6 +17,7 @@ function App() {
         <Solutions />
         <Technology />
         <Impact />
+        <About />
         <ContactForm />
       </main>
       <Footer />

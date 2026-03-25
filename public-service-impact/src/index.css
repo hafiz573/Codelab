@@ -18,6 +18,10 @@
   --color-impact-indigo: #6366f1;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   margin: 0;
