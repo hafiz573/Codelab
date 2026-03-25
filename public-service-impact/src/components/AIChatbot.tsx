@@ -51,7 +51,7 @@ const AIChatbot = () => {
   };
 
   return (
-    <div className="fixed bottom-8 right-8 z-[100]">
+    <div className="fixed bottom-8 right-8 z-[100] flex flex-col items-end">
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -132,12 +132,34 @@ const AIChatbot = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-cyan-500 text-white flex items-center justify-center shadow-2xl shadow-emerald-500/20 relative group"
+        className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-cyan-500 text-white grid place-items-center shadow-2xl shadow-emerald-500/20 relative"
       >
-        <div className="absolute -top-1 -right-1 w-5 h-5 bg-white rounded-full flex items-center justify-center animate-bounce">
+        <div className="absolute -top-1 -right-1 w-5 h-5 bg-white rounded-full flex items-center justify-center z-10">
           <Sparkles className="text-emerald-500 w-3 h-3" />
         </div>
-        {isOpen ? <X className="w-8 h-8" /> : <MessageCircle className="w-8 h-8" />}
+        <AnimatePresence mode="wait">
+          {isOpen ? (
+            <motion.div
+              key="close"
+              initial={{ rotate: -90, opacity: 0 }}
+              animate={{ rotate: 0, opacity: 1 }}
+              exit={{ rotate: 90, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <X className="w-8 h-8" />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="msg"
+              initial={{ rotate: 90, opacity: 0 }}
+              animate={{ rotate: 0, opacity: 1 }}
+              exit={{ rotate: -90, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <MessageCircle className="w-8 h-8" />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.button>
     </div>
   );
