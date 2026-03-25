@@ -18,6 +18,13 @@
   --color-impact-indigo: #6366f1;
 }
 
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 :root {
   --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
   --secondary-glow: linear-gradient(
@@ -67,6 +74,8 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding-right: 0.1em;
 }
 
 .impact-gradient {
@@ -74,6 +83,8 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding-right: 0.2em; /* Extra padding for italics */
 }
 
 /* Custom Animations */
