@@ -3,7 +3,9 @@ import Hero from './components/Hero';
 import Solutions from './components/Solutions';
 import Technology from './components/Technology';
 import Impact from './components/Impact';
+import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import AIChatbot from './components/AIChatbot';
 
 function App() {
   return (
@@ -14,8 +16,10 @@ function App() {
         <Solutions />
         <Technology />
         <Impact />
+        <ContactForm />
       </main>
       <Footer />
+      <AIChatbot />
     </div>
   );
 }
